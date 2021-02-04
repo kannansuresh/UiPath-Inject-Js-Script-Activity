@@ -67,15 +67,11 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="509,412" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Opening the form page" sap:VirtualizedContainerService.HintSize="509,412" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://aneejian.com/helpers/uipath-inject-js-form.html" Name="formUrl" />
-      <Variable x:TypeArguments="x:String" Name="jsPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">js//submitForm.js</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="input_formData">
+      <Variable x:TypeArguments="x:String" Default="js//submitForm.js" Name="jsPath" />
+      <Variable x:TypeArguments="x:String" Name="formData">
         <Variable.Default>
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3" xml:space="preserve">@"{
   ""input_name"": ""Rahul"",
@@ -97,18 +93,15 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
           <Sequence sap:VirtualizedContainerService.HintSize="376,188" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="alertText" />
-            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_1">
+            <ui:InjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Form page body'" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_1">
               <ui:InjectJsScript.InputParameter>
                 <InArgument x:TypeArguments="x:String">
-                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">input_formData</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">formData</mca:CSharpValue>
                 </InArgument>
               </ui:InjectJsScript.InputParameter>
               <ui:InjectJsScript.ScriptCode>

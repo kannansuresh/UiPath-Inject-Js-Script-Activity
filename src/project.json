@@ -3,8 +3,6 @@
   "description": "Sample project to explain Inject Js Script Activity.",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.9.5]",
-    "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.3]",
     "UiPath.UIAutomation.Activities": "[20.10.8]"
   },

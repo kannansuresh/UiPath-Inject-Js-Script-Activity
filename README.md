@@ -1,0 +1,2 @@
+# Using Inject Js Script Activity in UiPath
+The is a tutorial process associated with the article published at [http://aneejian.com/inject-js-script-activity-uipath](http://aneejian.com/inject-js-script-activity-uipath)

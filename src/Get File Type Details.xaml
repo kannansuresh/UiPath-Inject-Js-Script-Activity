@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_Total_Downloads" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="814,684" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Total_Downloads" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1108,684" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -80,17 +80,9 @@
           </ActivityAction.Argument>
           <Sequence sap:VirtualizedContainerService.HintSize="376,319" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="jsPath">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">js\\getFileTypeDetails.js</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="js\\getFileTypeDetails.js" Name="jsPath" />
               <Variable x:TypeArguments="x:String" Name="jsResult" />
-              <Variable x:TypeArguments="x:String" Name="input_fileType">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">rar</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="rar" Name="fileType" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -100,7 +92,7 @@
             <ui:InjectJsScript DisplayName="Inject Js Script 'HTML '" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_2">
               <ui:InjectJsScript.InputParameter>
                 <InArgument x:TypeArguments="x:String">
-                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">input_fileType</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">fileType</mca:CSharpValue>
                 </InArgument>
               </ui:InjectJsScript.InputParameter>
               <ui:InjectJsScript.ScriptCode>
